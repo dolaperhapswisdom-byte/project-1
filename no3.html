@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STING | Purple Grape Premium</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #10051f;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #19082d;
+    border-bottom: 1px solid #8c35d9;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #c77dff;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 8%;
+    background: radial-gradient(circle, #532080, #10051f 75%);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 58px;
+    color: #d9a2ff;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #ddd0e8;
+    line-height: 1.9;
+    max-width: 450px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 30px;
+    background: linear-gradient(90deg,#922be5,#d17aff);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+    padding: 30px;
+}
+
+.can {
+    width: 160px;
+    height: 360px;
+    margin: auto;
+    border-radius: 25px 25px 35px 35px;
+    background: linear-gradient(110deg,#35045c,#a43be8,#4b0877);
+    border: 3px solid #d99aff;
+    box-shadow: 0 0 50px #b34dff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-7deg);
+}
+
+.can span {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.can small {
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+.grapes {
+    font-size: 65px;
+    margin-top: 25px;
+}
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #d9a2ff;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #d9cde3;
+    line-height: 2;
+    max-width: 700px;
+    margin: auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #241036;
+    padding: 30px;
+    border: 1px solid #7434a6;
+    border-radius: 18px;
+}
+
+.card h3 {
+    color: #d9a2ff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #d4c5df;
+    line-height: 1.8;
+}
+
+footer {
+    background: #19082d;
+    padding: 25px;
+    text-align: center;
+    color: #bfa8d1;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">STING</div>
+    <nav>
+        <a href="#home">ໜ້າຫຼັກ</a>
+        <a href="#about">ກ່ຽວກັບ</a>
+        <a href="#features">ຈຸດເດັ່ນ</a>
+    </nav>
+</header>
+
+<main>
+<div class="hero" id="home">
+
+    <div class="hero-text">
+        <h1>STING PURPLE</h1>
+        <h2>ລົດຊາດອະງຸ່ນສີມ່ວງ</h2>
+
+        <p>
+            ສຳຜັດກັບດີໄຊທີ່ຫຼູຫຼາ
+            ໂດດເດັ່ນດ້ວຍສີມ່ວງອັນມີສະເໜ່
+            ພ້ອມກັບຄວາມທັນສະໄໝ
+            ທີ່ບອກຄວາມເປັນຕົວທ່ານ.
+        </p>
+
+        <a href="#about" class="btn">ສຳຫຼວດສິນຄ້າ</a>
+    </div>
+
+    <div class="product">
+        <div class="can">
+            <span>STING</span>
+            <small>PURPLE GRAPE</small>
+            <div class="grapes">🍇</div>
+        </div>
+    </div>
+
+</div>
+
+<section class="about" id="about">
+    <h2>ກ່ຽວກັບ STING PURPLE</h2>
+    <p>
+        STING PURPLE ເປັນແນວຄິດການນຳສະເໜີ
+        ຜະລິດຕະພັນໃນຮູບແບບສີມ່ວງ
+        ທີ່ສະທ້ອນເຖິງຄວາມຫຼູຫຼາ
+        ແລະຄວາມທັນສະໄໝ.
+    </p>
+</section>
+
+<section id="features">
+    <h2>ຈຸດເດັ່ນຂອງຜະລິດຕະພັນ</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>💜 ສີມ່ວງພຣີມຽມ</h3>
+            <p>ດີໄຊທີ່ໂດດເດັ່ນ ແລະມີສະເໜ່.</p>
+        </div>
+
+        <div class="card">
+            <h3>🍇 ຄອນເຊັບອະງຸ່ນ</h3>
+            <p>ການນຳສະເໜີທີ່ໄດ້ແຮງບັນດານໃຈຈາກອະງຸ່ນ.</p>
+        </div>
+
+        <div class="card">
+            <h3>✨ ຄວາມທັນສະໄໝ</h3>
+            <p>ຮູບແບບເວັບໄຊທີ່ສວຍງາມ ແລະໃຊ້ງານງ່າຍ.</p>
+        </div>
+
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>© 2026 STING PURPLE GRAPE | ເວັບໄຊນຳສະເໜີສິນຄ້າ</p>
+</footer>
+
+</body>
+</html>
