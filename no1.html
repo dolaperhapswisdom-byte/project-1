@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STING RED | Unleash Your Energy</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #100707;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #190909;
+}
+
+.logo {
+  color: #ff2525;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+nav a:hover {
+  color: #ff2525;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 8%;
+  background: radial-gradient(circle, #711010, #100707 70%);
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: clamp(45px, 7vw, 75px);
+  color: #ff2929;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.hero img {
+  width: min(330px, 85vw);
+  filter: drop-shadow(0 0 35px #ff2020);
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: #ff2525;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: white;
+  color: red;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+section h2 {
+  color: #ff2929;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.card {
+  background: #261010;
+  padding: 30px;
+  border: 1px solid #572020;
+  border-radius: 18px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: red;
+}
+
+.card h3 {
+  color: #ff4141;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #ddd;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 25px;
+  background: #190909;
+  text-align: center;
+  color: #aaa;
+}
+
+@media(max-width:600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">STING RED</div>
+  <nav>
+    <a href="#home">ໜ້າຫຼັກ</a>
+    <a href="#about">ກ່ຽວກັບ</a>
+    <a href="#features">ຈຸດເດັ່ນ</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-text">
+    <h1>STING RED</h1>
+    <p>
+      ສີແດງທີ່ໂດດເດັ່ນ!
+      ສະໄຕລ໌ທີ່ບໍ່ຄືໃຜ.
+      ພົບກັບນ້ຳສະຕິງສີແດງ
+      ທີ່ມາພ້ອມກັບຄວາມເປັນເອກະລັກ.
+    </p>
+    <a href="#about" class="btn">ຄົ້ນພົບເພີ່ມເຕີມ</a>
+  </div>
+
+  <img
+    src="https://placehold.co/330x500/9e1010/ffffff?text=STING+RED"
+    alt="STING RED Product">
+</div>
+
+<section id="about">
+  <h2>ABOUT STING</h2>
+  <p>
+    STING RED ນ້ຳເຄື່ອງດື່ມໃນຮູບແບບທັນສະໄໝ
+    ທີ່ມີດີໄຊສີແດງສຸດໂດດເດັ່ນ.
+  </p>
+</section>
+
+<section id="features">
+  <h2>PRODUCT HIGHLIGHTS</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>🔴 RED DESIGN</h3>
+      <p>ດີໄຊສີແດງໂດດເດັ່ນ ມີສະໄຕລ໌.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ STING STYLE</h3>
+      <p>ຮູບລັກທັນສະໄໝ ຈົດຈຳງ່າຍ.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 BE YOURSELF</h3>
+      <p>ສະແດງຄວາມເປັນຕົວເອງໃນທຸກສະໄຕລ໌.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>FEEL THE RED ENERGY</h2>
+  <p>STING RED – UNLEASH YOUR ENERGY!</p>
+  <a href="#home" class="btn">BACK TO TOP</a>
+</section>
+
+<footer>
+  © 2026 STING RED | Product Showcase Website
+</footer>
+
+</body>
+</html>
