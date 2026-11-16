@@ -1,0 +1,55 @@
+.collections {
+  padding: 60px 20px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.collections h2 {
+  margin-bottom: 35px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #222;
+}
+
+.can {
+  width: 100px;
+  height: 220px;
+  margin: auto;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+  writing-mode: vertical-rl;
+}
+
+.red .can {
+  background: linear-gradient(90deg,#8b0000,#ff3030,#a00000);
+}
+
+.yellow .can {
+  background: linear-gradient(90deg,#a77a00,#ffe600,#bd9000);
+  color: #111;
+}
+
+.purple .can {
+  background: linear-gradient(90deg,#430078,#bd55ff,#6200a5);
+}
+
+.red h3 { color: #ff3030; }
+.yellow h3 { color: #ffe000; }
+.purple h3 { color: #bd55ff; }
