@@ -4,136 +4,651 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #090909;
-  color: white;
+:root {
+  --accent: #ff2020;
+  --glow: rgba(255, 20, 20, .65);
 }
 
-header {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  height: 76px;
+  padding: 0 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 8%;
-  background: #151515;
+  border-bottom: 1px solid #292929;
+  background: #080808;
+  position: relative;
+  z-index: 20;
 }
 
-header h1 {
-  color: #ff3030;
+.logo {
+  color: #ff2424;
   font-size: 32px;
+  font-weight: 1000;
+  font-style: italic;
+  text-decoration: none;
+  letter-spacing: -2px;
 }
 
-header h1 span {
-  color: white;
+.logo span {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  margin-left: 20px;
+  color: #ddd;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.header-label {
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
 .hero {
-  text-align: center;
-  padding: 85px 15px;
-  background: linear-gradient(135deg, #300000, #090909);
+  min-height: 850px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 35px 5% 30px;
+  background:
+    radial-gradient(ellipse at 50% 70%, #242424 0%, #0b0b0b 43%, #030303 80%);
 }
 
-.hero h2 {
-  font-size: 35px;
-  margin-bottom: 15px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .17;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px);
+  background-size: 25px 25px;
 }
 
-.hero p {
-  color: #aaa;
-  letter-spacing: 3px;
+.hero-top {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 5;
 }
 
-.products {
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.products h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: #171717;
-  padding: 25px;
-  border-radius: 20px;
-  border: 1px solid #333;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  max-width: 180px;
-  height: 260px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 22px;
-}
-
-.card p {
-  margin-top: 12px;
-  color: #aaa;
-}
-
-.red:hover {
-  border-color: #ff3030;
-}
-
-.yellow:hover {
-  border-color: #ffd700;
-}
-
-.purple:hover {
-  border-color: #a855f7;
-}
-
-.about {
-  background: #151515;
-  padding: 50px;
-  text-align: center;
-}
-
-.about p {
-  color: #aaa;
+.brand-mark {
+  transform: rotate(-8deg);
   margin-top: 15px;
 }
 
-footer {
+.brand-small {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ddd;
+}
+
+.brand-name {
+  font-size: clamp(55px, 9vw, 110px);
+  line-height: .95;
+  font-weight: 1000;
+  font-style: italic;
+  letter-spacing: -7px;
+  color: white;
+  -webkit-text-stroke: 2px #ed1c24;
+  text-shadow: 5px 6px 0 #8d0505, 0 0 30px #f00;
+}
+
+.brand-sub {
+  display: block;
+  color: #ddd;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-align: right;
+}
+
+.hero-top h1 {
+  font-size: clamp(27px, 4vw, 52px);
+  line-height: .98;
+  font-weight: 1000;
+  font-style: italic;
+  text-align: right;
+  text-shadow: 0 0 20px #fff5;
+}
+
+.hero-top h1 span {
+  color: #ff2828;
+  text-shadow: 0 0 25px #f00;
+}
+
+.flavor-slogan {
+  position: absolute;
+  left: 5%;
+  top: 47%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: clamp(18px, 2.3vw, 30px);
+  font-weight: 1000;
+  font-style: italic;
+  transform: skew(-7deg);
+  text-shadow: 2px 3px 5px black;
+}
+
+.flavor-slogan strong {
+  color: #ff2828;
+}
+
+.stage {
+  position: relative;
+  height: 520px;
+  max-width: 1100px;
+  margin: 5px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.stage::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: var(--glow);
+  filter: blur(120px);
+  opacity: .35;
+  border-radius: 50%;
+  transition: background .5s;
+}
+
+.can-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.can {
+  position: absolute;
+  width: 175px;
+  height: 390px;
+  border-radius: 28px 28px 24px 24px;
+  background: linear-gradient(
+    90deg,
+    #5a5a5a 0%,
+    #d9d9d9 5%,
+    var(--can-light) 13%,
+    var(--can) 28%,
+    var(--can) 72%,
+    var(--can-dark) 88%,
+    #e7e7e7 96%,
+    #555 100%
+  );
+  box-shadow:
+    15px 30px 35px #000,
+    inset 8px 0 10px #ffffff40,
+    inset -9px 0 12px #0008,
+    0 0 35px var(--can-glow);
+  transition: .55s ease;
+  overflow: visible;
+}
+
+.main-can {
+  z-index: 5;
+  transform: translateY(-12px) scale(1.12);
+}
+
+.side-can {
+  z-index: 3;
+  transform: translateY(30px) scale(.85);
+  opacity: .94;
+}
+
+.gold-can {
+  left: calc(50% - 245px);
+  --can: #e7a900;
+  --can-light: #ffe98b;
+  --can-dark: #805000;
+  --can-glow: #ffb900;
+}
+
+.purple-can {
+  right: calc(50% - 245px);
+  --can: #7200bd;
+  --can-light: #e59bff;
+  --can-dark: #30004e;
+  --can-glow: #bd00ff;
+}
+
+.red-can {
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px) scale(1.12);
+  --can: #c50012;
+  --can-light: #ff6a72;
+  --can-dark: #59000a;
+  --can-glow: #ff1010;
+}
+
+.can-rim {
+  position: absolute;
+  top: -9px;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 19px;
+  border-radius: 50%;
+  background: linear-gradient(#eeeeee, #777, #cfcfcf, #555);
+  border: 2px solid #999;
+}
+
+.can-rim::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 7px;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #555;
+  border: 1px solid #ddd;
+}
+
+.can-base {
+  position: absolute;
+  bottom: -8px;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(#777, #ddd, #777);
+}
+
+.can-print {
+  position: absolute;
+  top: 80px;
+  width: 100%;
   text-align: center;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 2px 3px 4px #000;
+  transform: skew(-5deg);
+}
+
+.can-print small {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.can-print b {
+  margin-top: 13px;
+  font-size: 37px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 1000;
+  color: white;
+  -webkit-text-stroke: 1px #333;
+  letter-spacing: -3px;
+}
+
+.can-print i {
+  color: #fff;
+  font-size: 58px;
+  font-style: normal;
+  line-height: 1.1;
+  text-shadow: 0 0 15px white;
+}
+
+.can-print strong {
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+.can-print span {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.can-condensation {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 18% 20%, #ffffffbb 1px, transparent 3px),
+    radial-gradient(circle at 70% 28%, #ffffff99 2px, transparent 4px),
+    radial-gradient(circle at 45% 43%, #ffffff99 1px, transparent 3px),
+    radial-gradient(circle at 83% 64%, #ffffffaa 2px, transparent 4px),
+    radial-gradient(circle at 22% 75%, #ffffff88 1px, transparent 3px),
+    radial-gradient(circle at 65% 88%, #ffffff99 2px, transparent 4px);
+  background-size: 55px 65px;
+  opacity: .85;
+}
+
+.can-shine {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  height: 80%;
+  width: 10px;
+  border-radius: 50%;
+  background: #fff7;
+  filter: blur(7px);
+}
+
+.ice {
+  position: absolute;
+  z-index: 4;
+  width: 65px;
+  height: 65px;
+  border: 2px solid #ffffffaa;
+  background: linear-gradient(135deg, #ffffffaa, #9bc8e055, #ffffff33);
+  box-shadow: inset 0 0 18px white, 0 0 20px #bdeaff66;
+  transform: rotate(25deg) skew(-7deg);
+  backdrop-filter: blur(2px);
+}
+
+.ice-one { left: 8%; bottom: 20px; }
+.ice-two { left: 30%; bottom: 0; width: 45px; height: 45px; }
+.ice-three { right: 10%; bottom: 20px; width: 75px; height: 75px; }
+.ice-four { right: 30%; bottom: 0; width: 48px; height: 48px; }
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: 60px;
+  background: linear-gradient(180deg, #ffffff33, #202020, #050505);
+  border-top: 2px solid #ffffff66;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 2;
+}
+
+.lightning {
+  position: absolute;
+  width: 35%;
+  height: 250px;
+  filter: blur(2px);
+  opacity: .8;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.lightning-yellow {
+  left: 0;
+  top: 35%;
+  background: radial-gradient(ellipse, #ffbd0030, transparent 70%);
+  box-shadow: 0 0 80px #ffb300;
+}
+
+.lightning-red {
+  left: 35%;
+  top: 5%;
+  background: radial-gradient(ellipse, #ff000030, transparent 70%);
+  box-shadow: 0 0 100px #ff0000;
+}
+
+.lightning-purple {
+  right: 0;
+  top: 35%;
+  background: radial-gradient(ellipse, #bb00ff30, transparent 70%);
+  box-shadow: 0 0 80px #a000ff;
+}
+
+.smoke {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 20%, #0009 100%);
+  pointer-events: none;
+}
+
+.features {
+  position: absolute;
+  bottom: 38px;
+  left: 5%;
+  display: flex;
+  gap: 30px;
+  border: 1px solid #ff3030;
+  padding: 12px 20px;
+  transform: skew(-8deg);
+  z-index: 7;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.feature b {
+  color: #ff2929;
+  font-size: 25px;
+}
+
+.feature span {
+  color: #ddd;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+
+.bottom-banner {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  background: linear-gradient(100deg, #b90000, #ff2929);
+  padding: 16px 45px;
+  transform: skew(-15deg);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  z-index: 7;
+}
+
+.bottom-banner span {
+  color: white;
+  font-style: italic;
+  font-size: 21px;
+}
+
+.selector {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px auto 0;
+}
+
+.choice {
+  border: 1px solid #777;
+  background: #111;
+  color: white;
+  padding: 11px 23px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.choice:hover,
+.choice.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 20px var(--glow);
+}
+
+footer {
+  background: #080808;
+  border-top: 1px solid #222;
+  padding: 20px;
+  text-align: center;
   color: #777;
+  font-size: 10px;
+  letter-spacing: 3px;
 }
 
 @media (max-width: 700px) {
-  .product-list {
-    grid-template-columns: 1fr;
+  .header {
+    height: 65px;
+    padding: 0 5%;
+  }
+
+  nav {
+    gap: 12px;
   }
 
   nav a {
-    margin-left: 8px;
-    font-size: 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
-  .hero h2 {
-    font-size: 25px;
+  .header-label {
+    display: none;
+  }
+
+  .hero {
+    min-height: 790px;
+    padding: 25px 4%;
+  }
+
+  .hero-top {
+    gap: 10px;
+  }
+
+  .brand-name {
+    font-size: 58px;
+    letter-spacing: -5px;
+  }
+
+  .brand-small,
+  .brand-sub {
+    font-size: 8px;
+  }
+
+  .hero-top h1 {
+    font-size: 27px;
+  }
+
+  .stage {
+    height: 460px;
+    margin-top: 25px;
+  }
+
+  .can {
+    width: 120px;
+    height: 300px;
+  }
+
+  .main-can,
+  .red-can {
+    transform: translateX(-50%) translateY(-10px) scale(1.08);
+  }
+
+  .gold-can {
+    left: calc(50% - 120px);
+    transform: translateY(25px) scale(.82);
+  }
+
+  .purple-can {
+    right: calc(50% - 120px);
+    transform: translateY(25px) scale(.82);
+  }
+
+  .can-print {
+    top: 75px;
+  }
+
+  .can-print b {
+    font-size: 27px;
+  }
+
+  .can-print i {
+    font-size: 43px;
+  }
+
+  .can-print strong {
+    font-size: 13px;
+  }
+
+  .can-print small,
+  .can-print span {
+    font-size: 7px;
+  }
+
+  .flavor-slogan {
+    top: 42%;
+    left: 4%;
+    font-size: 15px;
+  }
+
+  .features {
+    bottom: 35px;
+    left: 3%;
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .feature span {
+    font-size: 7px;
+  }
+
+  .feature b {
+    font-size: 18px;
+  }
+
+  .bottom-banner {
+    bottom: 35px;
+    padding: 12px 15px;
+    font-size: 10px;
+  }
+
+  .bottom-banner span {
+    font-size: 13px;
+  }
+
+  .choice {
+    padding: 9px 15px;
+    font-size: 10px;
+  }
+
+  .ice {
+    width: 35px;
+    height: 35px;
   }
 }

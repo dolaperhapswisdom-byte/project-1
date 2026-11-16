@@ -3,132 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STING PREMIUM</title>
+  <title>STING PREMIUM | Energy Drink</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <h1>STING<span>.</span></h1>
+<header class="header">
+  <a class="logo" href="#">STING<span>®</span></a>
   <nav>
     <a href="#home">HOME</a>
-    <a href="#products">PRODUCTS</a>
+    <a href="#products">COLLECTION</a>
     <a href="#about">ABOUT</a>
   </nav>
+  <div class="header-label">PREMIUM ENERGY DRINK</div>
 </header>
 
-<section class="hero" id="home">
-  <h2>STING PREMIUM COLLECTION</h2>
-  <p>THREE COLORS · THREE DESIGNS</p>
-</section>
+<main id="home">
+  <section class="hero" id="products">
 
-<section class="products" id="products">
+    <div class="lightning lightning-yellow"></div>
+    <div class="lightning lightning-red"></div>
+    <div class="lightning lightning-purple"></div>
+    <div class="smoke"></div>
 
-  <h2>OUR PRODUCTS</h2>
+    <div class="hero-top">
+      <div class="brand-mark">
+        <span class="brand-small">ENERGY DRINK</span>
+        <div class="brand-name">STING</div>
+        <span class="brand-sub">UNLEASH YOUR ENERGY</span>
+      </div>
 
-  <div class="product-list">
-
-    <div class="card red">
-      <img src="images/red.png" alt="Sting Red">
-      <h3>STING RED</h3>
-      <p>RED EDITION</p>
+      <h1>UNLEASH<br>YOUR <span>ENERGY</span></h1>
     </div>
 
-    <div class="card yellow">
-      <img src="images/yellow.png" alt="Sting Yellow">
-      <h3>STING YELLOW</h3>
-      <p>YELLOW EDITION</p>
+    <div class="flavor-slogan">
+      <span>3 FLAVORS</span>
+      <span>3 STYLES</span>
+      <strong>1 POWER</strong>
     </div>
 
-    <div class="card purple">
-      <img src="images/purple.png" alt="Sting Purple">
-      <h3>STING PURPLE</h3>
-      <p>PURPLE EDITION</p>
+    <div class="stage">
+      <div class="ice ice-one"></div>
+      <div class="ice ice-two"></div>
+      <div class="ice ice-three"></div>
+      <div class="ice ice-four"></div>
+
+      <div class="can-scene">
+        <div class="can side-can gold-can" id="goldCan">
+          <div class="can-rim"></div>
+          <div class="can-condensation"></div>
+          <div class="can-print">
+            <small>ENERGY DRINK</small>
+            <b>STING</b>
+            <i>ϟ</i>
+            <strong>GOLD</strong>
+            <span>EDITION</span>
+          </div>
+          <div class="can-base"></div>
+        </div>
+
+        <div class="can main-can red-can" id="mainCan">
+          <div class="can-rim"></div>
+          <div class="can-condensation"></div>
+          <div class="can-print">
+            <small>ENERGY DRINK</small>
+            <b>STING</b>
+            <i>ϟ</i>
+            <strong id="mainFlavor">RED</strong>
+            <span>EDITION</span>
+          </div>
+          <div class="can-base"></div>
+        </div>
+
+        <div class="can side-can purple-can" id="purpleCan">
+          <div class="can-rim"></div>
+          <div class="can-condensation"></div>
+          <div class="can-print">
+            <small>ENERGY DRINK</small>
+            <b>STING</b>
+            <i>ϟ</i>
+            <strong>GRAPE</strong>
+            <span>EDITION</span>
+          </div>
+          <div class="can-base"></div>
+        </div>
+      </div>
+
+      <div class="water"></div>
     </div>
 
-  </div>
-</section>
+    <div class="features">
+      <div class="feature">
+        <b>ϟ</b>
+        <span>ENERGY<br>BOOST</span>
+      </div>
+      <div class="feature">
+        <b>◉</b>
+        <span>SHARPER<br>FOCUS</span>
+      </div>
+      <div class="feature">
+        <b>➤</b>
+        <span>ACTIVE<br>STYLE</span>
+      </div>
+    </div>
 
-<section class="about" id="about">
-  <h2>ABOUT STING</h2>
-  <p>Discover our premium three-color collection.</p>
-</section>
+    <div class="bottom-banner">
+      <span>STING</span> PREMIUM COLLECTION
+    </div>
 
-<footer>
-  © 2026 STING PREMIUM COLLECTION
+    <div class="selector">
+      <button class="choice active" data-flavor="red">RED</button>
+      <button class="choice" data-flavor="gold">GOLD</button>
+      <button class="choice" data-flavor="purple">GRAPE</button>
+    </div>
+
+  </section>
+</main>
+
+<footer id="about">
+  STING PREMIUM COLLECTION © 2026
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-<section class="slider" id="products">
-
-  <h2>STING COLLECTION</h2>
-  <p>CHOOSE YOUR FAVORITE COLOR</p>
-
-  <div class="slider-container">
-
-    <button class="arrow" onclick="moveSlide(-1)">
-      ❮
-    </button>
-
-    <div class="product-track" id="track">
-
-      <div class="product red">
-        <img src="images/red.png" alt="Sting Red">
-        <h3>STING RED</h3>
-        <p>RED EDITION</p>
-      </div>
-
-      <div class="product yellow">
-        <img src="images/yellow.png" alt="Sting Yellow">
-        <h3>STING YELLOW</h3>
-        <p>YELLOW EDITION</p>
-      </div>
-
-      <div class="product purple">
-        <img src="images/purple.png" alt="Sting Purple">
-        <h3>STING PURPLE</h3>
-        <p>PURPLE EDITION</p>
-      </div>
-
-    </div>
-
-    <button class="arrow" onclick="moveSlide(1)">
-      ❯
-    </button>
-
-  </div>
-
-  <div class="dots">
-    <button onclick="goSlide(0)">●</button>
-    <button onclick="goSlide(1)">●</button>
-    <button onclick="goSlide(2)">●</button>
-  </div>
-
-</section>
-
-<script>
-let currentSlide = 0;
-
-const track = document.getElementById("track");
-const totalSlides = 3;
-
-function updateSlide() {
-  track.style.transform =
-    `translateX(-${currentSlide * 100}%)`;
-}
-
-function moveSlide(direction) {
-  currentSlide =
-    (currentSlide + direction + totalSlides)
-    % totalSlides;
-
-  updateSlide();
-}
-
-function goSlide(index) {
-  currentSlide = index;
-  updateSlide();
-}
-</script>
